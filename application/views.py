@@ -1,7 +1,8 @@
+import json
 from tempfile import NamedTemporaryFile
 
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from openpyxl import Workbook
 
@@ -9,7 +10,22 @@ from application.models import *
 
 
 def index(request):
-    return render(request, "application/index.html", {})
+
+    if request.method == "GET":
+        return render(request, "application/index.html", {})
+
+    if request.method == "POST:
+        # passing JSON data would probably be a good idea, in which case:
+        data = json.loads(request.body)
+        entry = Entry.objects.get_or_create(name=data["entry"])
+        for row in data["rows"]:
+            row_to_add = Row.objects.get_or_create(level=row["level"], entry=entry)
+            row_to_add.people = row["people"]
+            row_to_add.save()
+        entry.save()
+        # optionally, involve django messages here
+        return redirect("application:index")
+            
 
 
 def generateExcelSheet(request):
