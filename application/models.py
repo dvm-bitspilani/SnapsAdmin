@@ -17,5 +17,9 @@ class Row(models.Model):
     entry = models.ForeignKey("Entry", on_delete=models.CASCADE, null=False, related_name="rows")
     people = models.TextField(null=False, blank=False) # comma seperated, left-to-right from viewer's perspective
 
+    class Meta:
+        verbose_name_plural = "Rows"
+        ordering = ["level"]
+
     def __str__(self):
         return "{} - Row {}".format(self.entry.name, self.level)
