@@ -6,6 +6,7 @@ class Entry(models.Model):
 
     class Meta:
         verbose_name_plural = "Entries"
+        ordering = ["name"]
 
     def __str__(self):
         return self.name

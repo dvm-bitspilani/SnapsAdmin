@@ -1,0 +1,38 @@
+<!-- DOCTYPE html -->
+<html>
+
+<head>
+  {% load static %}
+  <title> Generate Excel Sheet </title>
+  <link rel="stylesheet" type="text/css" href="{% static 'Materialize/materialize.min.css' %}"></link>
+</head>
+
+<body class="amber lighten-5">
+  <br><br><br>
+  <div class="container">
+    <form method="post" action="{% url 'application:generateExcelSheet' %}" id="main-form">
+      {% csrf_token %}
+
+
+    <table class="center-align">
+      <tr>
+        <h1 class="center-align"> Generate Excel Sheet </h1>
+      </tr>
+      <tr>
+        <td> <h3>Department:</h3> </td>
+        <td>
+          <select for="main-form">
+            {% for entry in entries %}
+              <option value="{{entry.id}}">{{entry.name}}</option>
+            {% endfor %}
+          </select>
+        </td>
+      </tr>
+    </table>
+
+
+  </form>
+  </div>
+</body>
+
+</html>
