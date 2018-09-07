@@ -4,10 +4,23 @@
 <head>
   {% load static %}
   <title> Add a New Entry </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{% static 'Materialize/materialize.min.css' %}"></link>
+  <style>
+    #add_button {
+      position: fixed;
+      bottom: 30;
+      right: 30;
+    }
+  </style>
 </head>
 
 <body class="amber lighten-5">
+
+  <div class="container">
+    <a id="add_button" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+  </div>
+
 </body>
 
 </html>
