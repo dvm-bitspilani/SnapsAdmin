@@ -3,29 +3,48 @@ from tempfile import NamedTemporaryFile
 
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 
 from openpyxl import Workbook
 
 from application.models import *
 
 
+@csrf_exempt
 def index(request):
 
     if request.method == "GET":
         return render(request, "application/index.html", {})
 
-    if request.method == "POST:
+    if request.method == "POST":
+        """
+        sample request:
+        {
+    	"entry": "RecNAcc",
+    	"rows": [
+        		{
+        			"level": 0,
+        			"people": "Hemanth, Nayan, Sanchit, Raghav"
+        		},
+        		{
+        			"level": 1,
+        			"people": "Hemanth, Nayan, Sanchit, Raghav"
+        		}
+    		]
+        }
+        """
         # passing JSON data would probably be a good idea, in which case:
-        data = json.loads(request.body)
-        entry = Entry.objects.get_or_create(name=data["entry"])
+        data = json.loads(request.body.decode("utf-8"))
+        entry = Entry.objects.get_or_create(name=data["entry"])[0]
         for row in data["rows"]:
-            row_to_add = Row.objects.get_or_create(level=row["level"], entry=entry)
+            print(entry)
+            row_to_add = Row.objects.get_or_create(level=row["level"], entry=entry)[0]
             row_to_add.people = row["people"]
             row_to_add.save()
         entry.save()
         # optionally, involve django messages here
         return redirect("application:index")
-            
+
 
 
 def generateExcelSheet(request):
