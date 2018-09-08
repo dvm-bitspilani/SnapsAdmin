@@ -35476,6 +35476,12 @@ var jsonDeptString = JSON.stringify(jsonDept)
 //     obj.style.display="block";
 // }
 
+document.getElementsByClassName("autocomplete")[0].addEventListener("click", function () {
+    setTimeout(function () {
+        isDeptPresent();
+    }, 200);
+});
+
 function isDeptPresent () {
     var deptName = document.getElementById("deptName").value;
     if (deptName != "") {
