@@ -20,8 +20,3 @@ urlpatterns = [
     path('bosm-snaps/admin/', admin.site.urls),
     path('bosm-snaps/', include('application.urls')),
 ]
-"""
-    path('admin/', admin.site.urls),
-    path('bosm-snaps/0216', include('application.urls')),
-"""
-
