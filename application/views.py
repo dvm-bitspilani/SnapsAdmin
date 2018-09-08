@@ -126,7 +126,7 @@ def autocomplete(request): # for ajax
 #@login_required
 def getEntry(request):
     if request.method == "POST":
-        data = json.loads(request.body.decode("utf-8"))
+        data = json.loads(request.body.decode('utf-8'))
         try:
             entry_name = data["entry_name"]
             entry = Entry.objects.get(name=entry_name)
