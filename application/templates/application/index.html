@@ -3,7 +3,7 @@
     <head>
         {% load static %}
         <meta charset="utf-8">
-        <title>Demo</title>
+        <title>BOSM Snaps Portal</title>
         <link type="text/css" rel="stylesheet" href="{% static 'abc.css' %}">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
@@ -39,13 +39,15 @@ Made overnight By DVM <img src="{% static 'heart-like.svg' %}" style="width: 15p
                     </tr>
                 </table>
                 <br>
-                <center><input id = "submitBtn" type="button" class="btn" value="Add">
+                <center><input id = "submitBtn" type="button" class="btn" value="Submit">
                 </center>
                 </div>
             </div>
         </td>
     </tr>
 </table>
+
+<p id = "message"></p>
 </center>
 
 <script>
@@ -35267,7 +35269,7 @@ Made overnight By DVM <img src="{% static 'heart-like.svg' %}" style="width: 15p
 var countries = [];
     for (var i = 0; i < json.length; i++) {
         var obj = json[i];
-        countries.push(obj.SNAME);
+        countries.push(obj.SNAME + "(" + obj.IDNO + ")");
 
     }
     // console.log(countries)
@@ -35541,10 +35543,14 @@ document.getElementById("submitBtn").addEventListener("click", function (f) {
         data: JSON.stringify(json),
         dataType: "json",
         error:function(xhr,textstatus,err){
-            console.log('error');
+            document.getElementById("message").innerHTML = err;
         }
     }).done(function(response){
-        console.log(response.message);
+        document.getElementById("message").innerHTML = response.message;
+
+        setTimeout(function () {
+          window.location.reload();
+        }, 1000);
     });
 
 	f.preventDefault();

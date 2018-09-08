@@ -64,7 +64,7 @@ def submit(request):
         """
         sample request:
         {
-    	"entry": "RecNAcc",
+    	"entry": "DVM",
     	"rows": [
         		{
         			"level": 0,
@@ -90,7 +90,7 @@ def submit(request):
             row_to_add.save()
         entry.save()
         messages.success(request,'Enteries added')
-        return JsonResponse({'message':'Done'})
+        return JsonResponse({'message':'Successfully Added :)'})
 
 
 @csrf_exempt
