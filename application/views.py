@@ -14,6 +14,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 
+from application.serializers import *
+from application.models import *
+
 
 @login_required
 def index(request):
@@ -117,3 +120,18 @@ def autocomplete(request): # for ajax
                     response_data["found"].append(val["SNAME"])
 
             return JsonResponse(response_data)
+
+
+@csrf_exempt
+#@login_required
+def getEntry(request):
+    if request.method == "POST":
+        data = json.loads(request.body.decode('utf-8'))
+        try:
+            entry_name = data["entry_name"]
+            entry = Entry.objects.get(name=entry_name)
+            entry_values = EntrySerializer(entry).data
+            entry_values["exists"] = True
+            return JsonResponse(entry_values)
+        except Entry.DoesNotExist:
+            return JsonResponse({"exists": False})

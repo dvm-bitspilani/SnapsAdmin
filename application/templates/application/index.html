@@ -35269,7 +35269,8 @@ Made overnight By DVM <img src="{% static 'heart-like.svg' %}" style="width: 15p
 var countries = [];
     for (var i = 0; i < json.length; i++) {
         var obj = json[i];
-        countries.push(obj.SNAME + "(" + obj.IDNO + ")");
+
+        countries.push(obj.SNAME + " ("+ obj.IDNO +")");
 
     }
     // console.log(countries)
@@ -35280,6 +35281,10 @@ var countries = [];
 </script>
   <script type="text/javascript" src="{% static 'jquery-3.3.1.min.js' %}"></script>
 <script>
+
+var requestBool = true;
+var c=0;
+
 var jsonDept = [
 
         {
@@ -35470,7 +35475,66 @@ var jsonDeptString = JSON.stringify(jsonDept)
 //     var obj=document.getElementById("dept");
 //     obj.style.display="block";
 // }
-var c=0;
+
+function isDeptPresent () {
+    var deptName = document.getElementById("deptName").value;
+    if (deptName != "") {
+        requestBool = false;
+
+        var json = {
+            entry_name: deptName
+        };
+        
+        var url = "{% url 'application:getEntry' %}";
+        $.ajax({
+            type:'POST',
+            contentType: 'application/json',
+            url: url,
+            data: JSON.stringify(json),
+            dataType: "json",
+            error:function(xhr,textstatus,err){
+                // document.getElementById("message").innerHTML = err;
+                console.log(err);
+            }
+        }).done(function(response){
+            // document.getElementById("message").innerHTML = response.message;
+            if (response.exists) {
+                var rows = response.rows;
+
+                var studentTables = document.getElementById("students_table");
+                studentTables.innerHTML = '<tr><td>Sitting</td><td style="width: 60%">Students : <textarea class = "blank students"></textarea></td><td>Name :<div class="autocomplete"><input type="text" placeholder="Enter Student Name" class="blank rows"></td></div></tr>';
+                document.getElementById("students").style.display = "none";
+                c = 0;
+
+                for (var j = 0; j < rows.length; j++) {
+                    students();
+                    document.getElementsByClassName("students")[j].value = rows[j].people;
+                }
+            }
+            else {
+                var studentTables = document.getElementById("students_table");
+                studentTables.innerHTML = '<tr><td>Sitting</td><td style="width: 60%">Students : <textarea class = "blank students"></textarea></td><td>Name :<div class="autocomplete"><input type="text" placeholder="Enter Student Name" class="blank rows"></td></div></tr>';
+                document.getElementById("students").style.display = "none";
+                c = 0;
+            }
+        });
+    }
+}
+
+window.onload = function () {
+    isDeptPresent();
+}
+
+var deptNameElem = document.getElementById("deptName");
+
+deptNameElem.addEventListener("keydown", function (e) {
+    if (e.keyCode == 13) {
+        setTimeout(function () {
+            isDeptPresent();
+        }, 500);
+    }
+});
+
 function students() {
     var obj = document.getElementById("students");
     var initial_row = document.getElementById("initial_row");
@@ -35532,8 +35596,6 @@ document.getElementById("submitBtn").addEventListener("click", function (f) {
         entry: deptName,
         rows: rows
     };
-
-    console.log(json);
 
     URL = "{% url 'application:submit' %}";
     $.ajax({
