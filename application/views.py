@@ -1,6 +1,9 @@
+import os
+import re
 import json
 from tempfile import NamedTemporaryFile
 
+from django.conf import settings
 from django.http import HttpResponse,JsonResponse
 from django.shortcuts import render, redirect
 
@@ -9,12 +12,13 @@ from django.contrib import messages
 from application.models import *
 from django.views.decorators.csrf import csrf_exempt
 
+
 def index(request):
 
     if request.method == "GET":
         return render(request, "application/index.html", {})
 
-            
+
 
 @csrf_exempt
 def generateExcelSheet(request):
@@ -47,10 +51,28 @@ def generateExcelSheet(request):
             response = HttpResponse(stream, content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
             response['Content-Disposition'] = "attachment; filename={}".format(entry.name)
             return response
-@csrf_exempt
+
+
+@csrf_exempt # ajax
 def submit(request):
     if request.method == "POST":
         # passing JSON data would probably be a good idea, in which case:
+        """
+        sample request:
+        {
+    	"entry": "RecNAcc",
+    	"rows": [
+        		{
+        			"level": 0,
+        			"people": "Hemanth, Nayan, Sanchit, Raghav"
+        		},
+        		{
+        			"level": 1,
+        			"people": "Hemanth, Nayan, Sanchit, Raghav"
+        		}
+    		]
+        }
+        """
         data = json.loads(request.body.decode('utf-8'))
         try:
             entry = Entry.objects.get_or_create(name=data["entry"])[0]
@@ -65,4 +87,28 @@ def submit(request):
         entry.save()
         messages.success(request,'Enteries added')
         return JsonResponse({'message':'Done'})
-        #return redirect(request.META.get('HTTP_REFERER'))
+
+
+@csrf_exempt
+def autocomplete(request): # for ajax
+        if request.method == "POST":
+            """
+            sample request:
+                {
+                	"snippet": "hem"
+                }
+            """
+            req_data = json.loads(request.body.decode('utf-8'))
+
+            mess_list = list()
+            response_data = {"found": []}
+            snippet = re.compile(r'^{}'.format(req_data["snippet"].upper()))
+
+            with open(os.path.join(settings.BASE_DIR, "mess_list.json"), "r") as file:
+                mess_list = json.loads(file.read().encode('utf-8-sig').decode('utf-8-sig')) # 0_0
+
+            for val in mess_list:
+                if snippet.match(val["SNAME"]):
+                    response_data["found"].append(val["SNAME"])
+
+            return JsonResponse(response_data)

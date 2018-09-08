@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('submit', views.submit, name="submit"),
     path('generate', views.generateExcelSheet, name="generateExcelSheet"),
+    path('autocomplete', views.autocomplete, name="autocomplete")
 ]
