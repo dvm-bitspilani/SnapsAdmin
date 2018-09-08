@@ -15,7 +15,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 
 
-@staff_member_required
+
 def index(request):
 
     if request.method == "GET":
@@ -24,7 +24,6 @@ def index(request):
 
 
 @csrf_exempt
-@staff_member_required
 def generateExcelSheet(request):
 
     if request.method == "GET":
@@ -58,7 +57,6 @@ def generateExcelSheet(request):
 
 
 @csrf_exempt # ajax
-@staff_member_required
 def submit(request):
     if request.method == "POST":
         # passing JSON data would probably be a good idea, in which case:
