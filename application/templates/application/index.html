@@ -12,26 +12,29 @@
     <body>
         <center>
 <div class="head">
-    Add a New Entry
+    BOSM Snaps Portal<br>
+</div>
+<div style="margin-top: 20px; font-size: 15px; right: 43vw; text-align: center;">
+Made overnight By DVM <img src="{% static 'heart-like.svg' %}" style="width: 15px;">
 </div>
 <br>
 
-<table border=5px class="entry">
+<table border=5px class="entry" style = "margin-top: 40px;">
     <!-- <th>Add a New Entry <i  onclick="dept()" class=" material-icons " style="position:relative; top:5px;">add_circle</i></th> -->
     <tr>
         <td>
             <div id="dept">
                 Name of Club/Dept./Assoc. : <div class = "autocomplete"><input id="deptName" list="depts" type=text class="blank"></div>
-                        <i onclick="students()" class="material-icons">add_circle</i>
+                        <div style = "float: right; display: flex; align-items: center;">Add Row<i onclick="students()" class="material-icons">add_circle</i></div>
                 <br><br>
                 <div id="students">
                 <table id="students_table" border=2px>
                     <tr>
                         <td>Sitting</td>
-                        <td style="width: 60%">Students : <textarea class = "students"></textarea></td>
+                        <td style="width: 60%">Students : <textarea class = "blank students"></textarea></td>
                         <td>Name :
                                 <div class="autocomplete">
-                             <input type="text" placeholder="Enter Student Name: " class="blank rows"></td>
+                             <input type="text" placeholder="Enter Student Name" class="blank rows"></td>
                                 </div>
                     </tr>
                 </table>
@@ -35482,7 +35485,7 @@ function students() {
         var cell3 = row.insertCell(2);
         cell1.innerHTML = "Standing " + c;
         cell2.innerHTML = "Students : <textarea class = 'blank students students" + c + "'></textarea>";
-        cell3.innerHTML = "Name : <div class = 'autocomplete' ><input type='text' class='blank rows row" + c + "'> </div>";
+        cell3.innerHTML = "Name : <div class = 'autocomplete' ><input type='text' placeholder = 'Enter Student Name' class='blank rows row" + c + "'> </div>";
         c++;
     }
 
