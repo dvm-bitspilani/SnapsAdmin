@@ -4,172 +4,175 @@ var jsonDept = [
             'SNAME': "Coding Club"
         },
         {
-            'SNAME': "Audi Force "
+            'SNAME': "Audi Force"
         },
         {
-            'SNAME': "Photography Club "
+            'SNAME': "Photography Club"
         },
         {
-            'SNAME': "Firewallz "
+            'SNAME': "Firewallz"
         },
         {
-            'SNAME': "Informalz "
+            'SNAME': "Informalz"
         },
         {
             'SNAME': "Hindi Activities Society"
         },
         {
-            'SNAME': "Dept. of Photography "
+            'SNAME': "Dept. of Photography"
         },
         {
-            'SNAME': "Creative Activities Club "
+            'SNAME': "Creative Activities Club"
         },
         {
             'SNAME': "Gaming Club"
         },
         {
-            'SNAME': "English Press Club "
+            'SNAME': "English Press Club"
         },
         {
-            'SNAME': "Dept. of Live Events "
+            'SNAME': "Dept. of Live Events"
         },
         {
-            'SNAME': "BITS Firefox Community "
+            'SNAME': "BITS Firefox Community"
         },
         {
-            'SNAME': "Hindi Press Club "
+            'SNAME': "Hindi Press Club"
         },
         {
-            'SNAME': "Radioaktiv "
+            'SNAME': "Radioaktiv"
         },
         {
             'SNAME': "Sounds"
         },
         {
-            'SNAME': "Lights "
+            'SNAME': "Lights"
         },
         {
-            'SNAME': "BOSM Publicity Team "
+            'SNAME': "BOSM Publicity Team"
         },
         {
-            'SNAME': "Rec. & Acc "
+            'SNAME': "Rec. & Acc"
         },
         {
-            'SNAME': "Dept. of Controls "
+            'SNAME': "Dept. of Controls"
         },
         {
-            'SNAME': "Dept. of Sponsorship "
+            'SNAME': "Dept. of Sponsorship"
         },
         {
-            'SNAME': "Department of PCr "
+            'SNAME': "Department of PCr"
         },
         {
-            'SNAME': "SFC "
+            'SNAME': "SFC"
         },
         {
-            'SNAME': "CoSSAc Body "
+            'SNAME': "CoSSAc Body"
         },
         {
-            'SNAME': "Athletics(Boys) "
+            'SNAME': "Athletics(Boys)"
         },
         {
-            'SNAME': "Athletics (Girls) "
+            'SNAME': "Athletics (Girls)"
         },
         {
-            'SNAME': "Badminton (Boys) "
+            'SNAME': "Badminton (Boys)"
         },
         {
-            'SNAME': "Badminton (Girls) "
+            'SNAME': "Badminton (Girls)"
         },
         {
             'SNAME': "Basketball (Boys)"
         },
         {
-            'SNAME': "Basketball (Girls) "
+            'SNAME': "Basketball (Girls)"
         },
         {
-            'SNAME': "Carrom "
+            'SNAME': "Carrom"
         },
         {
-            'SNAME': "Power Lifting "
+            'SNAME': "Power Lifting"
         },
         {
-            'SNAME': "Pool "
+            'SNAME': "Pool"
         },
         {
-            'SNAME': "Football (Boys) "
+            'SNAME': "Football (Boys)"
         },
         {
-            'SNAME': "Football (Girls) "
+            'SNAME': "Football (Girls)"
         },
         {
-            'SNAME': "Hockey (Boys) "
+            'SNAME': "Hockey (Boys)"
         },
         {
-            'SNAME': "Lawn Tennis (Boys) "
+            'SNAME': "Lawn Tennis (Boys)"
         },
         {
-            'SNAME': "Lawn Tennis (Girls) "
+            'SNAME': "Lawn Tennis (Girls)"
         },
         {
-            'SNAME': "Chess "
+            'SNAME': "Chess"
         },
         {
-            'SNAME': "Swimming "
+            'SNAME': "Swimming"
         },
         {
-            'SNAME': "Squash (Boys) "
+            'SNAME': "Squash (Boys)"
         },
         {
-            'SNAME': "Table Tennis (Boys) "
+            'SNAME': "Table Tennis (Boys)"
         },
         {
-            'SNAME': "Table Tennis (Girls) "
+            'SNAME': "Table Tennis (Girls)"
         },
         {
-            'SNAME': "Volleyball (Boys) "
+            'SNAME': "Volleyball (Boys)"
         },
         {
-            'SNAME': "Volleyball (Girls) "
+            'SNAME': "Volleyball (Girls)"
         },
         {
-            'SNAME': "Taekwondo "
+            'SNAME': "Taekwondo"
         },
         {
-            'SNAME': "Cricket (Boys) "
+            'SNAME': "Cricket (Boys)"
         },
         {
-            'SNAME': "Captains "
+            'SNAME': "Captains"
         },
         {
-            'SNAME': "Sports Union "
+            'SNAME': "Sports Union"
         },
         {
-            'SNAME': "Sports Council "
+            'SNAME': "Sports Council"
         },
         {
-            'SNAME': "SMAC "
+            'SNAME': "SMAC"
         },
         {
-            'SNAME': "SSMS "
+            'SNAME': "SSMS"
         },
         {
-            'SNAME': "National Service Scheme "
+            'SNAME': "National Service Scheme"
         },
         {
-            'SNAME': "HCA "
+            'SNAME': "HCA"
         },
         {
-            'SNAME': "Embryo "
+            'SNAME': "Embryo"
         },
         {
-            'SNAME': "MAC "
+            'SNAME': "MAC"
         },
         {
-            'SNAME': "Gurukul "
+            'SNAME': "Gurukul"
         },
         {
             'SNAME': "ELAS"
+        },
+        {
+            'SNAME': "Media Relations Club"
         }
 
 ]
