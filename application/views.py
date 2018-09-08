@@ -1,17 +1,22 @@
+import json
 from tempfile import NamedTemporaryFile
 
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import HttpResponse,JsonResponse
+from django.shortcuts import render, redirect
 
 from openpyxl import Workbook
-
+from django.contrib import messages
 from application.models import *
-
+from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
-    return render(request, "application/index.html", {})
 
+    if request.method == "GET":
+        return render(request, "application/index.html", {})
 
+            
+
+@csrf_exempt
 def generateExcelSheet(request):
 
     if request.method == "GET":
@@ -42,3 +47,22 @@ def generateExcelSheet(request):
             response = HttpResponse(stream, content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
             response['Content-Disposition'] = "attachment; filename={}".format(entry.name)
             return response
+@csrf_exempt
+def submit(request):
+    if request.method == "POST":
+        # passing JSON data would probably be a good idea, in which case:
+        data = json.loads(request.body.decode('utf-8'))
+        try:
+            entry = Entry.objects.get_or_create(name=data["entry"])[0]
+        except:
+            response=JsonResponse({'message':'Department exists'})
+            return response
+        print(data)
+        for row in data["rows"]:
+            row_to_add = Row.objects.get_or_create(level=row["level"], entry=entry)[0]
+            row_to_add.people = row["people"]
+            row_to_add.save()
+        entry.save()
+        messages.success(request,'Enteries added')
+        return JsonResponse({'message':'Done'})
+        #return redirect(request.META.get('HTTP_REFERER'))

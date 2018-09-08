@@ -4,23 +4,24 @@
 <head>
   {% load static %}
   <title> Add a New Entry </title>
- </head>
 
-<body>
-  <div class="row">
-    <div class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">textsms</i>
-          <input type="text" id="autocomplete-input" class="autocomplete">
-          <label for="autocomplete-input">Autocomplete</label>
-        </div>
-      </div>
-    </div>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'Materialize/materialize.min.css' %}"></link>
+  <style>
+    #add_button {
+      position: fixed;
+      bottom: 30;
+      right: 30;
+    }
+  </style>
+</head>
+
+<body class="amber lighten-5">
+
+  <div class="container">
+    <a id="add_button" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
   </div>
 
-
 </body>
+
 </html>
-
-

@@ -5,5 +5,6 @@ from application import views
 app_name="application"
 urlpatterns = [
     path('', views.index, name="index"),
-    path('generate', views.generateExcelSheet, name="generateExcelSheet")
+    path('submit', views.submit, name="submit"),
+    path('generate', views.generateExcelSheet, name="generateExcelSheet"),
 ]

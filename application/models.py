@@ -13,7 +13,7 @@ class Entry(models.Model):
 
 
 class Row(models.Model):
-    level = models.IntegerField(null=False, blank=False) # counting from the bottom
+    level = models.CharField(null=False, blank=False,max_length=200) # counting from the bottom
     entry = models.ForeignKey("Entry", on_delete=models.CASCADE, null=False, related_name="rows")
     people = models.TextField(null=False, blank=False) # comma seperated, left-to-right from viewer's perspective
 
