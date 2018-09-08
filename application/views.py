@@ -11,10 +11,10 @@ from openpyxl import Workbook
 from django.contrib import messages
 from application.models import *
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, staff_member_required
 
 
-@login_required
+@staff_member_required
 def index(request):
 
     if request.method == "GET":
@@ -23,7 +23,7 @@ def index(request):
 
 
 @csrf_exempt
-@login_required
+@staff_member_required
 def generateExcelSheet(request):
 
     if request.method == "GET":
@@ -57,7 +57,7 @@ def generateExcelSheet(request):
 
 
 @csrf_exempt # ajax
-@login_required
+@staff_member_required
 def submit(request):
     if request.method == "POST":
         # passing JSON data would probably be a good idea, in which case:
