@@ -1,177 +1,92 @@
 var jsonDept = [
+    { 'SNAME': 'Astro Club ' },
 
-        {
-            'SNAME': "Coding Club"
-        },
-        {
-            'SNAME': "Audi Force "
-        },
-        {
-            'SNAME': "Photography Club "
-        },
-        {
-            'SNAME': "Firewallz "
-        },
-        {
-            'SNAME': "Informalz "
-        },
-        {
-            'SNAME': "Hindi Activities Society"
-        },
-        {
-            'SNAME': "Dept. of Photography "
-        },
-        {
-            'SNAME': "Creative Activities Club "
-        },
-        {
-            'SNAME': "Gaming Club"
-        },
-        {
-            'SNAME': "English Press Club "
-        },
-        {
-            'SNAME': "Dept. of Live Events "
-        },
-        {
-            'SNAME': "BITS Firefox Community "
-        },
-        {
-            'SNAME': "Hindi Press Club "
-        },
-        {
-            'SNAME': "Radioaktiv "
-        },
-        {
-            'SNAME': "Sounds"
-        },
-        {
-            'SNAME': "Lights "
-        },
-        {
-            'SNAME': "BOSM Publicity Team "
-        },
-        {
-            'SNAME': "Rec. & Acc "
-        },
-        {
-            'SNAME': "Dept. of Controls "
-        },
-        {
-            'SNAME': "Dept. of Sponsorship "
-        },
-        {
-            'SNAME': "Department of PCr "
-        },
-        {
-            'SNAME': "SFC "
-        },
-        {
-            'SNAME': "CoSSAc Body "
-        },
-        {
-            'SNAME': "Athletics(Boys) "
-        },
-        {
-            'SNAME': "Athletics (Girls) "
-        },
-        {
-            'SNAME': "Badminton (Boys) "
-        },
-        {
-            'SNAME': "Badminton (Girls) "
-        },
-        {
-            'SNAME': "Basketball (Boys)"
-        },
-        {
-            'SNAME': "Basketball (Girls) "
-        },
-        {
-            'SNAME': "Carrom "
-        },
-        {
-            'SNAME': "Power Lifting "
-        },
-        {
-            'SNAME': "Pool "
-        },
-        {
-            'SNAME': "Football (Boys) "
-        },
-        {
-            'SNAME': "Football (Girls) "
-        },
-        {
-            'SNAME': "Hockey (Boys) "
-        },
-        {
-            'SNAME': "Lawn Tennis (Boys) "
-        },
-        {
-            'SNAME': "Lawn Tennis (Girls) "
-        },
-        {
-            'SNAME': "Chess "
-        },
-        {
-            'SNAME': "Swimming "
-        },
-        {
-            'SNAME': "Squash (Boys) "
-        },
-        {
-            'SNAME': "Table Tennis (Boys) "
-        },
-        {
-            'SNAME': "Table Tennis (Girls) "
-        },
-        {
-            'SNAME': "Volleyball (Boys) "
-        },
-        {
-            'SNAME': "Volleyball (Girls) "
-        },
-        {
-            'SNAME': "Taekwondo "
-        },
-        {
-            'SNAME': "Cricket (Boys) "
-        },
-        {
-            'SNAME': "Captains "
-        },
-        {
-            'SNAME': "Sports Union "
-        },
-        {
-            'SNAME': "Sports Council "
-        },
-        {
-            'SNAME': "SMAC "
-        },
-        {
-            'SNAME': "SSMS "
-        },
-        {
-            'SNAME': "National Service Scheme "
-        },
-        {
-            'SNAME': "HCA "
-        },
-        {
-            'SNAME': "Embryo "
-        },
-        {
-            'SNAME': "MAC "
-        },
-        {
-            'SNAME': "Gurukul "
-        },
-        {
-            'SNAME': "ELAS"
-        }
+    { 'SNAME': 'Coding Club' },
 
+    { 'SNAME': 'CrAC' },
+
+    { 'SNAME': 'Dance Club' },
+
+    { 'SNAME': 'ELAS' },
+
+    { 'SNAME': 'Embryo Club' },
+
+    { 'SNAME': 'Fashp' },
+
+    { 'SNAME': 'FMac' },
+
+    { 'SNAME': 'Gurukul' },
+
+    { 'SNAME': 'Matrix' },
+
+    { 'SNAME': 'Mime Club' },
+
+    { 'SNAME': 'Mountaineering and Adventure Club (MAC)' },
+
+    { 'SNAME': 'Music Club' },
+
+    { 'SNAME': 'Nirmaan' },
+
+    { 'SNAME': 'NSS' },
+
+    { 'SNAME': 'OEP' },
+
+    { 'SNAME': 'Oasis Hindi Press' },
+
+    { 'SNAME': 'Photog' },
+
+    { 'SNAME': 'Punjabi Cultural Association (PCA)' },
+
+    { 'SNAME': 'Radioaktiv Club' },
+
+    { 'SNAME': 'Ragamalika' },
+
+    { 'SNAME': 'Renewable Energy Club' },
+
+    { 'SNAME': 'WRS' },
+
+    { 'SNAME': 'Poetry Club' },
+
+    { 'SNAME': 'HAS' },
+
+    { 'SNAME': 'ARBITS' },
+
+    { 'SNAME': 'Public Policy Club' },
+
+    { 'SNAME': 'AUDI FORCE' },
+
+    { 'SNAME': 'DLE' },
+
+    { 'SNAME': 'DoPy' },
+
+    { 'SNAME': 'Department of Theatre' },
+
+    { 'SNAME': 'Department of firewallz' },
+
+    { 'SNAME': 'INFORMALZ' },
+
+    { 'SNAME': 'Lights' },
+
+    { 'SNAME': 'Sounds' },
+
+    { 'SNAME': 'Stage Controls' },
+
+    { 'SNAME': 'ADP' },
+
+    { 'SNAME': 'Controls' },
+
+    { 'SNAME': 'DVM' },
+
+    { 'SNAME': 'PCr' },
+
+    { 'SNAME': 'RecnAcc' },
+
+    { 'SNAME': 'Sponz' },
+
+    { 'SNAME': 'President' },
+
+    { 'SNAME': 'General Secretary' }
+       
 ]
 
 var deptName = [];
@@ -253,7 +168,7 @@ document.getElementById("submitBtn").addEventListener("click", function (f) {
 
     console.log(json);
 
-    URL = "http://bits-dvm.org/bosm-snaps/submit";
+    URL = "http://bits-oasis.org/oasis-snaps/submit";
     $.ajax({
         type:'POST',
         contentType: 'application/json',

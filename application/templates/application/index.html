@@ -3,20 +3,22 @@
     <head>
         {% load static %}
         <meta charset="utf-8">
-        <title>BOSM Snaps Portal</title>
-        <link type="text/css" rel="stylesheet" href="{% static 'abc.css' %}">
+        <title>OASIS 2018 Snaps Portal</title>
+		<link type="text/css" rel="stylesheet" href="{% static 'abc.css' %}">
+		<link rel="shortcut icon" type="image/png" href="https://lh3.googleusercontent.com/zTZI1v-RGhRnl8o-7Ncn_HCqRuo6n7kGs6puwDE35F7GR8v69-9BeCAm-HwibCnIbwI=w170" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
          </script>
     </head>
     <body>
         <center>
+			<br>
 <div class="head">
-    BOSM Snaps Portal<br>
+    OASIS 2018 Snaps Portal<br>
 </div>
-<div style="margin-top: 20px; font-size: 15px; right: 43vw; text-align: center;">
+<!-- <div style="margin-top: 20px; font-size: 15px; right: 43vw; text-align: center;">
 Made overnight By DVM <img src="{% static 'heart-like.svg' %}" style="width: 15px;">
-</div>
+</div> -->
 <br>
 
 <table border=5px class="entry" style = "margin-top: 40px;">
@@ -39,7 +41,9 @@ Made overnight By DVM <img src="{% static 'heart-like.svg' %}" style="width: 15p
                     </tr>
                 </table>
                 <br>
-                <center><input id = "submitBtn" type="button" class="btn" value="Submit">
+                <center>
+					<button id="submitBtn"><span>Submit </span></button>
+					<!-- <input id = "submitBtn" type="button" class="btn" value="Submit"> -->
                 </center>
                 </div>
             </div>
@@ -47,7 +51,9 @@ Made overnight By DVM <img src="{% static 'heart-like.svg' %}" style="width: 15p
     </tr>
 </table>
 
-<p id = "message"></p>
+<p id="message"></p>
+
+
 </center>
 
 <script>
@@ -35288,181 +35294,93 @@ var c=0;
 
 var jsonDept = [
 
-        {
-            'SNAME': "Coding Club"
-        },
-        {
-            'SNAME': "Audi Force"
-        },
-        {
-            'SNAME': "Photography Club"
-        },
-        {
-            'SNAME': "Firewallz "
-        },
-        {
-            'SNAME': "Informalz "
-        },
-        {
-            'SNAME': "Hindi Activities Society"
-        },
-        {
-            'SNAME': "Dept. of Photography"
-        },
-        {
-            'SNAME': "Creative Activities Club"
-        },
-        {
-            'SNAME': "Gaming Club"
-        },
-        {
-            'SNAME': "English Press Club "
-        },
-        {
-            'SNAME': "Dept. of Live Events"
-        },
-        {
-            'SNAME': "BITS Firefox Community"
-        },
-        {
-            'SNAME': "Hindi Press Club"
-        },
-        {
-            'SNAME': "Radioaktiv"
-        },
-        {
-            'SNAME': "Sounds"
-        },
-        {
-            'SNAME': "Lights"
-        },
-        {
-            'SNAME': "BOSM Publicity Team"
-        },
-        {
-            'SNAME': "Rec. & Acc"
-        },
-        {
-            'SNAME': "Dept. of Controls"
-        },
-        {
-            'SNAME': "Dept. of Sponsorship"
-        },
-        {
-            'SNAME': "Department of PCr"
-        },
-        {
-            'SNAME': "SFC"
-        },
-        {
-            'SNAME': "CoSSAc Body"
-        },
-        {
-            'SNAME': "Athletics(Boys)"
-        },
-        {
-            'SNAME': "Athletics (Girls)"
-        },
-        {
-            'SNAME': "Badminton (Boys)"
-        },
-        {
-            'SNAME': "Badminton (Girls)"
-        },
-        {
-            'SNAME': "Basketball (Boys)"
-        },
-        {
-            'SNAME': "Basketball (Girls)"
-        },
-        {
-            'SNAME': "Carrom"
-        },
-        {
-            'SNAME': "Power Lifting"
-        },
-        {
-            'SNAME': "Pool"
-        },
-        {
-            'SNAME': "Football (Boys)"
-        },
-        {
-            'SNAME': "Football (Girls)"
-        },
-        {
-            'SNAME': "Hockey (Boys)"
-        },
-        {
-            'SNAME': "Lawn Tennis (Boys)"
-        },
-        {
-            'SNAME': "Lawn Tennis (Girls)"
-        },
-        {
-            'SNAME': "Chess"
-        },
-        {
-            'SNAME': "Swimming"
-        },
-        {
-            'SNAME': "Squash (Boys)"
-        },
-        {
-            'SNAME': "Table Tennis (Boys)"
-        },
-        {
-            'SNAME': "Table Tennis (Girls)"
-        },
-        {
-            'SNAME': "Volleyball (Boys)"
-        },
-        {
-            'SNAME': "Volleyball (Girls)"
-        },
-        {
-            'SNAME': "Taekwondo"
-        },
-        {
-            'SNAME': "Cricket (Boys)"
-        },
-        {
-            'SNAME': "Captains"
-        },
-        {
-            'SNAME': "Sports Union"
-        },
-        {
-            'SNAME': "Sports Council"
-        },
-        {
-            'SNAME': "SMAC"
-        },
-        {
-            'SNAME': "SSMS"
-        },
-        {
-            'SNAME': "National Service Scheme"
-        },
-        {
-            'SNAME': "HCA "
-        },
-        {
-            'SNAME': "Embryo"
-        },
-        {
-            'SNAME': "MAC"
-        },
-        {
-            'SNAME': "Gurukul"
-        },
-        {
-            'SNAME': "ELAS"
-        },
-        {
-            'SNAME': "Media Relations Club"
-        }
+        { 'SNAME': 'Astro Club ' },
 
+	{ 'SNAME': 'Coding Club' },
+
+	{ 'SNAME': 'CrAC' },
+
+	{ 'SNAME': 'Dance Club' },
+
+	{ 'SNAME': 'ELAS' },
+
+	{ 'SNAME': 'Embryo Club' },
+
+	{ 'SNAME': 'Fashp' },
+
+	{ 'SNAME': 'FMac' },
+
+	{ 'SNAME': 'Gurukul' },
+
+	{ 'SNAME': 'Matrix' },
+
+	{ 'SNAME': 'Mime Club' },
+
+	{ 'SNAME': 'Mountaineering and Adventure Club (MAC)' },
+
+	{ 'SNAME': 'Music Club' },
+
+	{ 'SNAME': 'Nirmaan' },
+
+	{ 'SNAME': 'NSS' },
+
+	{ 'SNAME': 'OEP' },
+
+	{ 'SNAME': 'Oasis Hindi Press' },
+
+	{ 'SNAME': 'Photog' },
+
+	{ 'SNAME': 'Punjabi Cultural Association (PCA)' },
+
+	{ 'SNAME': 'Radioaktiv Club' },
+
+	{ 'SNAME': 'Ragamalika' },
+
+	{ 'SNAME': 'Renewable Energy Club' },
+
+	{ 'SNAME': 'WRS' },
+
+	{ 'SNAME': 'Poetry Club' },
+
+	{ 'SNAME': 'HAS' },
+
+	{ 'SNAME': 'ARBITS' },
+
+	{ 'SNAME': 'Public Policy Club' },
+
+	{ 'SNAME': 'AUDI FORCE' },
+
+	{ 'SNAME': 'DLE' },
+
+	{ 'SNAME': 'DoPy' },
+
+	{ 'SNAME': 'Department of Theatre' },
+
+	{ 'SNAME': 'Department of firewallz' },
+
+	{ 'SNAME': 'INFORMALZ' },
+
+	{ 'SNAME': 'Lights' },
+
+	{ 'SNAME': 'Sounds' },
+
+	{ 'SNAME': 'Stage Controls' },
+
+	{ 'SNAME': 'ADP' },
+
+	{ 'SNAME': 'Controls' },
+
+	{ 'SNAME': 'DVM' },
+
+	{ 'SNAME': 'PCr' },
+
+	{ 'SNAME': 'RecnAcc' },
+
+	{ 'SNAME': 'Sponz' },
+
+	{ 'SNAME': 'President' },
+
+	{ 'SNAME': 'General Secretary' }
 ]
 
 
