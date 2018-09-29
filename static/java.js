@@ -83,6 +83,8 @@ var jsonDept = [
 
     { 'SNAME': 'StuCCA' },
 
+    { 'SNAME': 'The Eastern Outlook' },
+
     { 'SNAME': 'Sounds' },
 
     { 'SNAME': 'Stage Controls' },
