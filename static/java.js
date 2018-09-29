@@ -1,5 +1,5 @@
 var jsonDept = [
-    { 'SNAME': 'Astro Club ' },
+    { 'SNAME': 'Astro Club' },
 
     { 'SNAME': 'Coding Club' },
 
@@ -67,6 +67,8 @@ var jsonDept = [
 
     { 'SNAME': 'Lights' },
 
+    { 'SNAME': 'SMAC' },
+
     { 'SNAME': 'Sounds' },
 
     { 'SNAME': 'Stage Controls' },
@@ -86,7 +88,7 @@ var jsonDept = [
     { 'SNAME': 'President' },
 
     { 'SNAME': 'General Secretary' }
-       
+
 ]
 
 var deptName = [];

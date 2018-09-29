@@ -1,5 +1,5 @@
 var jsonDept = [
-    { 'SNAME': 'Astro Club ' },
+    { 'SNAME': 'Astro Club' },
 
     { 'SNAME': 'Coding Club' },
 
@@ -66,6 +66,8 @@ var jsonDept = [
     { 'SNAME': 'INFORMALZ' },
 
     { 'SNAME': 'Lights' },
+
+    { 'SNAME': 'SMAC' },
 
     { 'SNAME': 'Sounds' },
 
