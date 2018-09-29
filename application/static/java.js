@@ -71,6 +71,18 @@ var jsonDept = [
 
     { 'SNAME': 'SOVESA' },
 
+    { 'SNAME': 'SSMS' },
+
+    { 'SNAME': 'Drama Club' },
+
+    { 'SNAME': 'SU' },
+
+    { 'SNAME': 'Union Council' },
+
+    { 'SNAME': 'CRC' },
+
+    { 'SNAME': 'StuCCA' },
+
     { 'SNAME': 'Sounds' },
 
     { 'SNAME': 'Stage Controls' },
