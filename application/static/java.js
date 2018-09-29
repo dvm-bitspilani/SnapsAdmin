@@ -69,6 +69,8 @@ var jsonDept = [
 
     { 'SNAME': 'SMAC' },
 
+    { 'SNAME': 'SOVESA' },
+
     { 'SNAME': 'Sounds' },
 
     { 'SNAME': 'Stage Controls' },
