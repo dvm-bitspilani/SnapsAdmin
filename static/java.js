@@ -71,6 +71,12 @@ var jsonDept = [
 
     { 'SNAME': 'SOVESA' },
 
+    { 'SNAME': 'BOSM Sponz' },
+
+    { 'SNAME': 'NSS' },
+
+    { 'SNAME': 'NSS(BOSM)' },
+
     { 'SNAME': 'SSMS' },
 
     { 'SNAME': 'Drama Club' },
